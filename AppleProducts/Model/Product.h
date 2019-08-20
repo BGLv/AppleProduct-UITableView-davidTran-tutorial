@@ -25,6 +25,9 @@ typedef NS_ENUM(NSUInteger,ProductRating){
 @property (nonatomic,strong) NSString *descriptionProduct;
 @property (nonatomic) ProductRating rating;
 
+-(id)initWithTitle: (NSString *)title withDescription:(NSString *)description
+        andImgName:(NSString *)imageName;
+
 @end
 
 NS_ASSUME_NONNULL_END

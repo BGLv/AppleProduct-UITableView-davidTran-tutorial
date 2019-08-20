@@ -14,6 +14,7 @@
 		8373CD17230C39CD00903ED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8373CD15230C39CD00903ED4 /* LaunchScreen.storyboard */; };
 		8373CD1A230C39CD00903ED4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD19230C39CD00903ED4 /* main.m */; };
 		8373CD23230C3E4700903ED4 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD22230C3E4700903ED4 /* Product.m */; };
+		8373CD26230C45D600903ED4 /* ProductLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD25230C45D600903ED4 /* ProductLine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		8373CD19230C39CD00903ED4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8373CD21230C3E4700903ED4 /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		8373CD22230C3E4700903ED4 /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		8373CD24230C45D600903ED4 /* ProductLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductLine.h; sourceTree = "<group>"; };
+		8373CD25230C45D600903ED4 /* ProductLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductLine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 			children = (
 				8373CD21230C3E4700903ED4 /* Product.h */,
 				8373CD22230C3E4700903ED4 /* Product.m */,
+				8373CD24230C45D600903ED4 /* ProductLine.h */,
+				8373CD25230C45D600903ED4 /* ProductLine.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8373CD0F230C39CB00903ED4 /* ViewController.m in Sources */,
+				8373CD26230C45D600903ED4 /* ProductLine.m in Sources */,
 				8373CD23230C3E4700903ED4 /* Product.m in Sources */,
 				8373CD1A230C39CD00903ED4 /* main.m in Sources */,
 				8373CD0C230C39CB00903ED4 /* AppDelegate.m in Sources */,
