@@ -15,6 +15,7 @@
 		8373CD1A230C39CD00903ED4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD19230C39CD00903ED4 /* main.m */; };
 		8373CD23230C3E4700903ED4 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD22230C3E4700903ED4 /* Product.m */; };
 		8373CD26230C45D600903ED4 /* ProductLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD25230C45D600903ED4 /* ProductLine.m */; };
+		8373CD29230C58D700903ED4 /* ProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD28230C58D700903ED4 /* ProductTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		8373CD22230C3E4700903ED4 /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		8373CD24230C45D600903ED4 /* ProductLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductLine.h; sourceTree = "<group>"; };
 		8373CD25230C45D600903ED4 /* ProductLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductLine.m; sourceTree = "<group>"; };
+		8373CD27230C58D700903ED4 /* ProductTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductTableViewController.h; sourceTree = "<group>"; };
+		8373CD28230C58D700903ED4 /* ProductTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				8373CD0D230C39CB00903ED4 /* ViewController.h */,
 				8373CD0E230C39CB00903ED4 /* ViewController.m */,
 				8373CD10230C39CB00903ED4 /* Main.storyboard */,
+				8373CD27230C58D700903ED4 /* ProductTableViewController.h */,
+				8373CD28230C58D700903ED4 /* ProductTableViewController.m */,
 				8373CD13230C39CD00903ED4 /* Assets.xcassets */,
 				8373CD15230C39CD00903ED4 /* LaunchScreen.storyboard */,
 				8373CD18230C39CD00903ED4 /* Info.plist */,
@@ -164,6 +169,7 @@
 				8373CD23230C3E4700903ED4 /* Product.m in Sources */,
 				8373CD1A230C39CD00903ED4 /* main.m in Sources */,
 				8373CD0C230C39CB00903ED4 /* AppDelegate.m in Sources */,
+				8373CD29230C58D700903ED4 /* ProductTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

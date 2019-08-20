@@ -23,7 +23,7 @@
 
 + (NSArray *) getProductLines {
     
-    return [[NSArray alloc] init];
+    return [[NSArray alloc] initWithObjects:[ProductLine iDevices], [ProductLine mac],[ProductLine software], [ProductLine iPod], [ProductLine iCloudAndApplePay], nil];
 }
 
 #define mark - private helper Methods
