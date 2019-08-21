@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8373CD0C230C39CB00903ED4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD0B230C39CB00903ED4 /* AppDelegate.m */; };
-		8373CD0F230C39CB00903ED4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD0E230C39CB00903ED4 /* ViewController.m */; };
 		8373CD12230C39CB00903ED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8373CD10230C39CB00903ED4 /* Main.storyboard */; };
 		8373CD14230C39CD00903ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8373CD13230C39CD00903ED4 /* Assets.xcassets */; };
 		8373CD17230C39CD00903ED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8373CD15230C39CD00903ED4 /* LaunchScreen.storyboard */; };
@@ -16,14 +15,13 @@
 		8373CD23230C3E4700903ED4 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD22230C3E4700903ED4 /* Product.m */; };
 		8373CD26230C45D600903ED4 /* ProductLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD25230C45D600903ED4 /* ProductLine.m */; };
 		8373CD29230C58D700903ED4 /* ProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD28230C58D700903ED4 /* ProductTableViewController.m */; };
+		8373CD2E230D47AC00903ED4 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD2D230D47AC00903ED4 /* ProductTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8373CD07230C39CB00903ED4 /* AppleProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8373CD0A230C39CB00903ED4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8373CD0B230C39CB00903ED4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8373CD0D230C39CB00903ED4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8373CD0E230C39CB00903ED4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8373CD11230C39CB00903ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8373CD13230C39CD00903ED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8373CD16230C39CD00903ED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +33,8 @@
 		8373CD25230C45D600903ED4 /* ProductLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductLine.m; sourceTree = "<group>"; };
 		8373CD27230C58D700903ED4 /* ProductTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductTableViewController.h; sourceTree = "<group>"; };
 		8373CD28230C58D700903ED4 /* ProductTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewController.m; sourceTree = "<group>"; };
+		8373CD2C230D47AC00903ED4 /* ProductTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
+		8373CD2D230D47AC00903ED4 /* ProductTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,11 +70,8 @@
 				8373CD20230C3A4C00903ED4 /* Model */,
 				8373CD0A230C39CB00903ED4 /* AppDelegate.h */,
 				8373CD0B230C39CB00903ED4 /* AppDelegate.m */,
-				8373CD0D230C39CB00903ED4 /* ViewController.h */,
-				8373CD0E230C39CB00903ED4 /* ViewController.m */,
-				8373CD10230C39CB00903ED4 /* Main.storyboard */,
-				8373CD27230C58D700903ED4 /* ProductTableViewController.h */,
-				8373CD28230C58D700903ED4 /* ProductTableViewController.m */,
+				8373CD2B230C9D3000903ED4 /* Views */,
+				8373CD2A230C9AFB00903ED4 /* Controllers */,
 				8373CD13230C39CD00903ED4 /* Assets.xcassets */,
 				8373CD15230C39CD00903ED4 /* LaunchScreen.storyboard */,
 				8373CD18230C39CD00903ED4 /* Info.plist */,
@@ -92,6 +89,25 @@
 				8373CD25230C45D600903ED4 /* ProductLine.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8373CD2A230C9AFB00903ED4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8373CD27230C58D700903ED4 /* ProductTableViewController.h */,
+				8373CD28230C58D700903ED4 /* ProductTableViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8373CD2B230C9D3000903ED4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8373CD10230C39CB00903ED4 /* Main.storyboard */,
+				8373CD2C230D47AC00903ED4 /* ProductTableViewCell.h */,
+				8373CD2D230D47AC00903ED4 /* ProductTableViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8373CD0F230C39CB00903ED4 /* ViewController.m in Sources */,
 				8373CD26230C45D600903ED4 /* ProductLine.m in Sources */,
 				8373CD23230C3E4700903ED4 /* Product.m in Sources */,
 				8373CD1A230C39CD00903ED4 /* main.m in Sources */,
+				8373CD2E230D47AC00903ED4 /* ProductTableViewCell.m in Sources */,
 				8373CD0C230C39CB00903ED4 /* AppDelegate.m in Sources */,
 				8373CD29230C58D700903ED4 /* ProductTableViewController.m in Sources */,
 			);

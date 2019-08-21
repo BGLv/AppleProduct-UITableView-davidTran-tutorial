@@ -5,10 +5,14 @@
 //  Created by Bogdan Lviv on 8/20/19.
 //  Copyright © 2019 Bogdan Lviv. All rights reserved.
 //
+// 1 - Design the new cell in Storyboard
+// 2 - Create a subclass of UITableViewCell for new cell
+// 3 - Update cell with UITableViewDataSource
 
 #import "ProductTableViewController.h"
-#import "Model/Product.h"
-#import "Model/ProductLine.h"
+#import "../Model/Product.h"
+#import "../Model/ProductLine.h"
+#import "../Views/ProductTableViewCell.h"
 
 @interface ProductTableViewController ()
 @property (nonatomic, strong) NSArray* products;
@@ -29,8 +33,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.dataSource = self;
+   /* self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    */
+    self.title=@"Apple Store";
+    
+    //if i comment this two line nothing changes
+    self.tableView.estimatedRowHeight=self.tableView.rowHeight;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -54,7 +65,11 @@
     
     Product *product = [self.products objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = product.title;
+    if([cell isKindOfClass:[ProductTableViewCell class]]){
+        [(ProductTableViewCell *) cell setProduct:product];
+    }
+    
+    //cell.textLabel.text = product.title;
     
     return  cell;
 }
