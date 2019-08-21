@@ -14,6 +14,12 @@
 // 2 Delete a row (in our data model && in our tableView - UI)
 // 3 Nice animation - move table view rows up
 
+// --
+
+// * Move rows around table view
+// 1. tell the table view that you want to be able to move rows around
+// 2. update the data model && update the table view UI
+
 #import "ProductTableViewController.h"
 #import "../Model/Product.h"
 #import "../Model/ProductLine.h"
@@ -104,6 +110,26 @@
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         
     }
+}
+
+//moving cells around
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{
+    return true;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
+    
+    NSMutableArray *productsAtSourceSection = [self.productLines[sourceIndexPath.section] products];
+    
+    Product *productToMove = productsAtSourceSection[sourceIndexPath.row];
+    
+    //move the product to destination products array
+    NSMutableArray *productsAtDestinationSection=[self.productLines[destinationIndexPath.section] products];
+    [productsAtDestinationSection insertObject:productToMove atIndex:destinationIndexPath.row];
+    
+    //delete the product to move from the source product array
+    [[self.productLines[sourceIndexPath.section] products] removeObjectAtIndex:sourceIndexPath.row];
 }
 
 @end
