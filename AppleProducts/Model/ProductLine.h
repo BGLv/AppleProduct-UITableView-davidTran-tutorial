@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ProductLine : NSObject
 
 @property (nonatomic,strong) NSString *name;
-@property (nonatomic, strong) NSArray *products; //of Product
+@property (nonatomic, strong) NSMutableArray *products; //of Product
 
--(id) initWithName: (NSString *)named andProducts: (NSArray*)products;
+-(id) initWithName: (NSString *)named andProducts: (NSMutableArray*)products;
 + (NSArray *) getProductLines;
 @end
 

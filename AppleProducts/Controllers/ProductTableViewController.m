@@ -9,6 +9,11 @@
 // 2 - Create a subclass of UITableViewCell for new cell
 // 3 - Update cell with UITableViewDataSource
 
+// * Delete Rows
+// 1 Edit button on the right
+// 2 Delete a row (in our data model && in our tableView - UI)
+// 3 Nice animation - move table view rows up
+
 #import "ProductTableViewController.h"
 #import "../Model/Product.h"
 #import "../Model/ProductLine.h"
@@ -42,6 +47,8 @@
     //if i comment this two line nothing changes
     self.tableView.estimatedRowHeight=self.tableView.rowHeight;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -81,6 +88,22 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     ProductLine *productLine = self.productLines[section];
     return productLine.name;
+}
+
+// Delete rows
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(UITableViewCellEditingStyleDelete == editingStyle){
+        // 1 - delete the product from the productLine's products array
+        ProductLine *productLine = self.productLines[indexPath.section];
+        [productLine.products removeObjectAtIndex:indexPath.row];
+        
+        // 2 - update the table view with new data
+        //[tableView reloadData];//bad way
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+    }
 }
 
 @end

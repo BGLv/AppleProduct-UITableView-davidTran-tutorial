@@ -10,7 +10,7 @@
 #import "Product.h"
 @implementation ProductLine
 
-- (id)initWithName:(NSString *)named andProducts:(NSArray *)products{
+- (id)initWithName:(NSString *)named andProducts:(NSMutableArray *)products{
     self = [super init];
     if(self){
         self.name = named;
