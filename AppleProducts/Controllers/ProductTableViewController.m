@@ -15,19 +15,20 @@
 #import "../Views/ProductTableViewCell.h"
 
 @interface ProductTableViewController ()
-@property (nonatomic, strong) NSArray* products;
+@property (nonatomic, strong) NSArray* productLines;
 
 @end
 
 @implementation ProductTableViewController
 
 
-- (NSArray *)products{
-    if(!_products){
+- (NSArray *)productLines{
+    if(!_productLines){
         //_products=[[[ProductLine getProductLines] firstObject] products];
-        _products=[[[ProductLine getProductLines] objectAtIndex:1] products];
+        //_products=[[[ProductLine getProductLines] objectAtIndex:1] products];
+        _productLines = [ProductLine getProductLines];
     }
-    return _products;
+    return _productLines;
 }
 
 - (void)viewDidLoad {
@@ -52,18 +53,21 @@
 #define mark - UITableViewDatasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return self.productLines.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.products count];
+    return [[self.productLines[section] products] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProductCell" forIndexPath:indexPath];
     
-    Product *product = [self.products objectAtIndex:indexPath.row];
+    //Product *product = [self.products objectAtIndex:indexPath.row];
+    ProductLine *productLine = self.productLines[indexPath.section];
+    NSArray *products = productLine.products;
+    Product *product = products[indexPath.row];
     
     if([cell isKindOfClass:[ProductTableViewCell class]]){
         [(ProductTableViewCell *) cell setProduct:product];
@@ -74,6 +78,9 @@
     return  cell;
 }
 
-
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    ProductLine *productLine = self.productLines[section];
+    return productLine.name;
+}
 
 @end
