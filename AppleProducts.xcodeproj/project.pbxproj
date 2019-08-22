@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83499364230E6DF900BB9B20 /* ProductDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83499363230E6DF900BB9B20 /* ProductDetailTableViewController.m */; };
 		8373CD0C230C39CB00903ED4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8373CD0B230C39CB00903ED4 /* AppDelegate.m */; };
 		8373CD12230C39CB00903ED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8373CD10230C39CB00903ED4 /* Main.storyboard */; };
 		8373CD14230C39CD00903ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8373CD13230C39CD00903ED4 /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83499362230E6DF900BB9B20 /* ProductDetailTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductDetailTableViewController.h; sourceTree = "<group>"; };
+		83499363230E6DF900BB9B20 /* ProductDetailTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductDetailTableViewController.m; sourceTree = "<group>"; };
 		8373CD07230C39CB00903ED4 /* AppleProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8373CD0A230C39CB00903ED4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8373CD0B230C39CB00903ED4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 			children = (
 				8373CD27230C58D700903ED4 /* ProductTableViewController.h */,
 				8373CD28230C58D700903ED4 /* ProductTableViewController.m */,
+				83499362230E6DF900BB9B20 /* ProductDetailTableViewController.h */,
+				83499363230E6DF900BB9B20 /* ProductDetailTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				8373CD26230C45D600903ED4 /* ProductLine.m in Sources */,
 				8373CD23230C3E4700903ED4 /* Product.m in Sources */,
 				8373CD1A230C39CD00903ED4 /* main.m in Sources */,
+				83499364230E6DF900BB9B20 /* ProductDetailTableViewController.m in Sources */,
 				8373CD2E230D47AC00903ED4 /* ProductTableViewCell.m in Sources */,
 				8373CD0C230C39CB00903ED4 /* AppDelegate.m in Sources */,
 				8373CD29230C58D700903ED4 /* ProductTableViewController.m in Sources */,
