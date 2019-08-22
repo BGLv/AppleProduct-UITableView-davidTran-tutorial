@@ -15,8 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *productTitleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *productDescriptionTextView;
 
-@property (nonatomic, strong) Product *product;
-
 @end
 
 @implementation ProductDetailTableViewController

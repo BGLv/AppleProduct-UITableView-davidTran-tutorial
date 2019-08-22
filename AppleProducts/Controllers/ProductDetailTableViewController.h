@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class Product;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ProductDetailTableViewController : UITableViewController <UITextFieldDelegate>
+
+@property (nonatomic, strong) Product *product;
 
 @end
 

@@ -24,10 +24,11 @@
 #import "../Model/Product.h"
 #import "../Model/ProductLine.h"
 #import "../Views/ProductTableViewCell.h"
+#import "ProductDetailTableViewController.h"
 
 @interface ProductTableViewController ()
 @property (nonatomic, strong) NSArray* productLines;
-
+@property (nonatomic, strong) Product* selectedProduct;
 @end
 
 @implementation ProductTableViewController
@@ -63,7 +64,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-#define mark - UITableViewDatasource
+#pragma mark - UITableViewDatasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.productLines.count;
@@ -130,6 +131,22 @@
     
     //delete the product to move from the source product array
     [[self.productLines[sourceIndexPath.section] products] removeObjectAtIndex:sourceIndexPath.row];
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ProductLine *productLine = self.productLines[indexPath.section];
+    Product *product = productLine.products[indexPath.row];
+    self.selectedProduct = product;
+    [self performSegueWithIdentifier:@"ShowProductDetail" sender:nil];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"ShowProductDetail"]){
+        ProductDetailTableViewController *productDetailTVC = segue.destinationViewController;
+        productDetailTVC.product = self.selectedProduct;
+    }
 }
 
 @end
